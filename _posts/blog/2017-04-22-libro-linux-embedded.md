@@ -2,7 +2,7 @@
 layout: post
 title: "Un libro su GNU/Linux embedded"
 modified:
-categories: blog, linux
+categories: blog
 share: true
 comments: true
 excerpt: Il libro che non c'è
