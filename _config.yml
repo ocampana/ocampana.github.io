@@ -5,7 +5,6 @@ locale: it-IT
 description: Memento audere semper
 logo: site-logo.png
 search: true
-#url: https://ocampana.github.io
 url: http://www.campana.vi.it
 
 # Jekyll configuration

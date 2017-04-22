@@ -6,6 +6,10 @@ categories: blog, linux
 share: true
 comments: true
 excerpt: Il libro che non c'è
+image:
+  feature: Raspberry-Pi-3-top-down-web.jpg
+  credit: Raspberry Pi Foundation
+  creditlink: https://www.raspberrypi.org/
 ---
 
 Per svariati motivi, lavorativi e non, sto valutando la possibilità di prendere tutte le mie vecchie presentazioni tenute ai vari LinuxDay, LinuxCafé e lezioni universitarie, aggiornare le parti vecchie e scrivere un libretto su GNU/Linux embedded.
