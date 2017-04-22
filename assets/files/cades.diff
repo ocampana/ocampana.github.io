@@ -1,0 +1,260 @@
+diff --git a/apps/smime.c b/apps/smime.c
+index c583f8a..c08ef63 100644
+--- a/apps/smime.c
++++ b/apps/smime.c
+@@ -93,6 +93,7 @@ int MAIN(int argc, char **argv)
+ 	const char *inmode = "r", *outmode = "w";
+ 	char *infile = NULL, *outfile = NULL;
+ 	char *signerfile = NULL, *recipfile = NULL;
++	char *signerhashfile = NULL;
+ 	STACK_OF(OPENSSL_STRING) *sksigners = NULL, *skkeys = NULL;
+ 	char *certfile = NULL, *keyfile = NULL, *contfile=NULL;
+ 	const EVP_CIPHER *cipher = NULL;
+@@ -271,6 +272,13 @@ int MAIN(int argc, char **argv)
+ 				}
+ 			signerfile = *++args;
+ 			}
++		else if (!strcmp (*args, "-signerhash"))
++			{
++			if (!args[1])
++				goto argerr;
++
++			signerhashfile = *++args;
++			}
+ 		else if (!strcmp (*args, "-recip"))
+ 			{
+ 			if (!args[1])
+@@ -293,7 +301,7 @@ int MAIN(int argc, char **argv)
+ 			{
+ 			if (!args[1])	
+ 				goto argerr;
+-			/* If previous -inkey arument add signer to list */
++			/* If previous -inkey argument add signer to list */
+ 			if (keyfile)
+ 				{
+ 				if (!signerfile)
+@@ -431,64 +439,65 @@ int MAIN(int argc, char **argv)
+ 		argerr:
+ 		BIO_printf (bio_err, "Usage smime [options] cert.pem ...\n");
+ 		BIO_printf (bio_err, "where options are\n");
+-		BIO_printf (bio_err, "-encrypt       encrypt message\n");
+-		BIO_printf (bio_err, "-decrypt       decrypt encrypted message\n");
+-		BIO_printf (bio_err, "-sign          sign message\n");
+-		BIO_printf (bio_err, "-verify        verify signed message\n");
+-		BIO_printf (bio_err, "-pk7out        output PKCS#7 structure\n");
++		BIO_printf (bio_err, "-encrypt         encrypt message\n");
++		BIO_printf (bio_err, "-decrypt         decrypt encrypted message\n");
++		BIO_printf (bio_err, "-sign            sign message\n");
++		BIO_printf (bio_err, "-verify          verify signed message\n");
++		BIO_printf (bio_err, "-pk7out          output PKCS#7 structure\n");
+ #ifndef OPENSSL_NO_DES
+-		BIO_printf (bio_err, "-des3          encrypt with triple DES\n");
+-		BIO_printf (bio_err, "-des           encrypt with DES\n");
++		BIO_printf (bio_err, "-des3            encrypt with triple DES\n");
++		BIO_printf (bio_err, "-des             encrypt with DES\n");
+ #endif
+ #ifndef OPENSSL_NO_SEED
+-		BIO_printf (bio_err, "-seed          encrypt with SEED\n");
++		BIO_printf (bio_err, "-seed            encrypt with SEED\n");
+ #endif
+ #ifndef OPENSSL_NO_RC2
+-		BIO_printf (bio_err, "-rc2-40        encrypt with RC2-40 (default)\n");
+-		BIO_printf (bio_err, "-rc2-64        encrypt with RC2-64\n");
+-		BIO_printf (bio_err, "-rc2-128       encrypt with RC2-128\n");
++		BIO_printf (bio_err, "-rc2-40          encrypt with RC2-40 (default)\n");
++		BIO_printf (bio_err, "-rc2-64          encrypt with RC2-64\n");
++		BIO_printf (bio_err, "-rc2-128         encrypt with RC2-128\n");
+ #endif
+ #ifndef OPENSSL_NO_AES
+ 		BIO_printf (bio_err, "-aes128, -aes192, -aes256\n");
+-		BIO_printf (bio_err, "               encrypt PEM output with cbc aes\n");
++		BIO_printf (bio_err, "                 encrypt PEM output with cbc aes\n");
+ #endif
+ #ifndef OPENSSL_NO_CAMELLIA
+ 		BIO_printf (bio_err, "-camellia128, -camellia192, -camellia256\n");
+-		BIO_printf (bio_err, "               encrypt PEM output with cbc camellia\n");
++		BIO_printf (bio_err, "                 encrypt PEM output with cbc camellia\n");
+ #endif
+-		BIO_printf (bio_err, "-nointern      don't search certificates in message for signer\n");
+-		BIO_printf (bio_err, "-nosigs        don't verify message signature\n");
+-		BIO_printf (bio_err, "-noverify      don't verify signers certificate\n");
+-		BIO_printf (bio_err, "-nocerts       don't include signers certificate when signing\n");
+-		BIO_printf (bio_err, "-nodetach      use opaque signing\n");
+-		BIO_printf (bio_err, "-noattr        don't include any signed attributes\n");
+-		BIO_printf (bio_err, "-binary        don't translate message to text\n");
+-		BIO_printf (bio_err, "-certfile file other certificates file\n");
+-		BIO_printf (bio_err, "-signer file   signer certificate file\n");
+-		BIO_printf (bio_err, "-recip  file   recipient certificate file for decryption\n");
+-		BIO_printf (bio_err, "-in file       input file\n");
+-		BIO_printf (bio_err, "-inform arg    input format SMIME (default), PEM or DER\n");
+-		BIO_printf (bio_err, "-inkey file    input private key (if not signer or recipient)\n");
+-		BIO_printf (bio_err, "-keyform arg   input private key format (PEM or ENGINE)\n");
+-		BIO_printf (bio_err, "-out file      output file\n");
+-		BIO_printf (bio_err, "-outform arg   output format SMIME (default), PEM or DER\n");
+-		BIO_printf (bio_err, "-content file  supply or override content for detached signature\n");
+-		BIO_printf (bio_err, "-to addr       to address\n");
+-		BIO_printf (bio_err, "-from ad       from address\n");
+-		BIO_printf (bio_err, "-subject s     subject\n");
+-		BIO_printf (bio_err, "-text          include or delete text MIME headers\n");
+-		BIO_printf (bio_err, "-CApath dir    trusted certificates directory\n");
+-		BIO_printf (bio_err, "-CAfile file   trusted certificates file\n");
+-		BIO_printf (bio_err, "-crl_check     check revocation status of signer's certificate using CRLs\n");
+-		BIO_printf (bio_err, "-crl_check_all check revocation status of signer's certificate chain using CRLs\n");
++		BIO_printf (bio_err, "-nointern        don't search certificates in message for signer\n");
++		BIO_printf (bio_err, "-nosigs          don't verify message signature\n");
++		BIO_printf (bio_err, "-noverify        don't verify signers certificate\n");
++		BIO_printf (bio_err, "-nocerts         don't include signers certificate when signing\n");
++		BIO_printf (bio_err, "-nodetach        use opaque signing\n");
++		BIO_printf (bio_err, "-noattr          don't include any signed attributes\n");
++		BIO_printf (bio_err, "-binary          don't translate message to text\n");
++		BIO_printf (bio_err, "-certfile file   other certificates file\n");
++		BIO_printf (bio_err, "-signer file     signer certificate file\n");
++		BIO_printf (bio_err, "-signerhash file sha256 hash of signing certificate file\n");
++		BIO_printf (bio_err, "-recip  file     recipient certificate file for decryption\n");
++		BIO_printf (bio_err, "-in file         input file\n");
++		BIO_printf (bio_err, "-inform arg      input format SMIME (default), PEM or DER\n");
++		BIO_printf (bio_err, "-inkey file      input private key (if not signer or recipient)\n");
++		BIO_printf (bio_err, "-keyform arg     input private key format (PEM or ENGINE)\n");
++		BIO_printf (bio_err, "-out file        output file\n");
++		BIO_printf (bio_err, "-outform arg     output format SMIME (default), PEM or DER\n");
++		BIO_printf (bio_err, "-content file    supply or override content for detached signature\n");
++		BIO_printf (bio_err, "-to addr         to address\n");
++		BIO_printf (bio_err, "-from ad         from address\n");
++		BIO_printf (bio_err, "-subject s       subject\n");
++		BIO_printf (bio_err, "-text            include or delete text MIME headers\n");
++		BIO_printf (bio_err, "-CApath dir      trusted certificates directory\n");
++		BIO_printf (bio_err, "-CAfile file     trusted certificates file\n");
++		BIO_printf (bio_err, "-crl_check       check revocation status of signer's certificate using CRLs\n");
++		BIO_printf (bio_err, "-crl_check_all   check revocation status of signer's certificate chain using CRLs\n");
+ #ifndef OPENSSL_NO_ENGINE
+-		BIO_printf (bio_err, "-engine e      use engine e, possibly a hardware device.\n");
++		BIO_printf (bio_err, "-engine e        use engine e, possibly a hardware device.\n");
+ #endif
+-		BIO_printf (bio_err, "-passin arg    input file pass phrase source\n");
++		BIO_printf (bio_err, "-passin arg      input file pass phrase source\n");
+ 		BIO_printf(bio_err,  "-rand file%cfile%c...\n", LIST_SEPARATOR_CHAR, LIST_SEPARATOR_CHAR);
+-		BIO_printf(bio_err,  "               load the file (or the files in the directory) into\n");
+-		BIO_printf(bio_err,  "               the random number generator\n");
+-		BIO_printf (bio_err, "cert.pem       recipient certificate(s) for encryption\n");
++		BIO_printf(bio_err,  "                 load the file (or the files in the directory) into\n");
++		BIO_printf(bio_err,  "                 the random number generator\n");
++		BIO_printf (bio_err, "cert.pem         recipient certificate(s) for encryption\n");
+ 		goto end;
+ 		}
+ 
+@@ -709,6 +718,8 @@ int MAIN(int argc, char **argv)
+ 			flags |= PKCS7_REUSE_DIGEST;
+ 		for (i = 0; i < sk_OPENSSL_STRING_num(sksigners); i++)
+ 			{
++			PKCS7_SIGNER_INFO *si = NULL;
++
+ 			signerfile = sk_OPENSSL_STRING_value(sksigners, i);
+ 			keyfile = sk_OPENSSL_STRING_value(skkeys, i);
+ 			signer = load_cert(bio_err, signerfile,FORMAT_PEM, NULL,
+@@ -719,9 +730,79 @@ int MAIN(int argc, char **argv)
+ 			       "signing key file");
+ 			if (!key)
+ 				goto end;
+-			if (!PKCS7_sign_add_signer(p7, signer, key,
+-						sign_md, flags))
++			if (!(si = PKCS7_sign_add_signer(p7, signer, key,
++							sign_md, flags)))
+ 				goto end;
++
++			if (signerhashfile)
++				{
++				BIO *inhash;
++				int signed_string_nid = -1;
++
++				ASN1_OBJECT *algorithm_identifier;
++				ASN1_OCTET_STRING *certificate_hash;
++				ASN1_STRING *seq;
++
++				unsigned char *data;
++				unsigned char *data2;
++				unsigned char *p;
++				int size;
++				int total;
++                                char buffer[65];
++
++				if (!(inhash = BIO_new_file(signerhashfile,
++							"r")))
++					{
++					BIO_printf (bio_err,
++						"Can't open signerhash file %s\n",
++						signerhashfile);
++					goto end;
++					}
++				memset (buffer, 0, sizeof(buffer));
++				BIO_read(inhash, buffer, 64);
++				BIO_free(inhash);
++
++				/* ESSCertIDv2 */
++				algorithm_identifier = OBJ_nid2obj(NID_sha256);
++				certificate_hash = ASN1_OCTET_STRING_new();
++				ASN1_OCTET_STRING_set(certificate_hash,
++						(unsigned char*) buffer,
++						strlen(buffer));
++
++				size = i2d_ASN1_OBJECT(algorithm_identifier, NULL);
++				size += i2d_ASN1_OCTET_STRING(certificate_hash, NULL);
++				total = ASN1_object_size(1,size,V_ASN1_SEQUENCE);
++
++				data = malloc(total);
++				p = data;
++				ASN1_put_object(&p,1,size,V_ASN1_SEQUENCE,
++						V_ASN1_UNIVERSAL);
++				i2d_ASN1_OBJECT(algorithm_identifier,&p);
++				i2d_ASN1_OCTET_STRING(certificate_hash,&p);
++
++				/* SigningCertificateV2 */
++				total = ASN1_object_size(1,size,V_ASN1_SEQUENCE);
++				data2 = malloc (total);
++				p = data2;
++				ASN1_put_object(&p,1,size,V_ASN1_SEQUENCE,
++						V_ASN1_UNIVERSAL);
++				memcpy(p, data, size);
++				seq=ASN1_STRING_new();
++				ASN1_STRING_set(seq,data,total);
++
++				signed_string_nid = OBJ_create("1.2.840.113549.1.9.16.2.47",
++							"id-aa-signingCertificateV2",
++							"id-aa-signingCertificateV2");
++				PKCS7_add_signed_attribute(si, signed_string_nid,
++							V_ASN1_SEQUENCE, seq);
++
++				free(data2);
++				free(data);
++				ASN1_OCTET_STRING_free(certificate_hash);
++				ASN1_OBJECT_free(algorithm_identifier);
++				}
++			signerhashfile = NULL;
++
+ 			X509_free(signer);
+ 			signer = NULL;
+ 			EVP_PKEY_free(key);
+diff --git a/doc/apps/smime.pod b/doc/apps/smime.pod
+index e4e89af..0cb49d1 100644
+--- a/doc/apps/smime.pod
++++ b/doc/apps/smime.pod
+@@ -17,6 +17,7 @@ B<openssl> B<smime>
+ [B<-in file>]
+ [B<-certfile file>]
+ [B<-signer file>]
++[B<-signerhash file>]
+ [B<-recip  file>]
+ [B<-inform SMIME|PEM|DER>]
+ [B<-passin arg>]
+@@ -221,6 +222,12 @@ used multiple times if more than one signer is required. If a message is being
+ verified then the signers certificates will be written to this file if the
+ verification was successful.
+ 
++=item B<-signerhash file>
++
++the sha256sum of the DER-encoded public certificate used for signing the file.
++This, together with -md sha256, is required to output a pkcs#7 file conformant
++with cades.
++
+ =item B<-recip file>
+ 
+ the recipients certificate when decrypting a message. This certificate
