@@ -30,13 +30,45 @@
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
         {% endif %}
         {% if author.avatar contains 'http' %}
-          <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+          <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></img>
         {% elsif author.avatar %}
-          <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+          <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></img>
         {% endif %}
         <span class="author vcard">Di <span class="fn">{{ author.name }}</span></span>
-        <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i> {{ page.date | italian_date}}</time></span>
-        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i> {{ page.modified | italian_date }}</time></span>{% endif %}
+        <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i>{% assign m = page.date | date: "%-m" %}
+        {{ page.date | date: "%-d" }}
+        {% case m %}
+          {% when '1' %}Gennaio
+          {% when '2' %}Febbraio
+          {% when '3' %}Marzo
+          {% when '4' %}Aprile
+          {% when '5' %}Maggio
+          {% when '6' %}Giugno
+          {% when '7' %}Luglio
+          {% when '8' %}Agosto
+          {% when '9' %}Settembre
+          {% when '10' %}Ottobre
+          {% when '11' %}Novembre
+          {% when '12' %}Dicembre
+        {% endcase %}
+        {{ page.date | date: "%Y" }}</time></span>
+        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i>{% assign m = page.modified | date: "%-m" %}
+        {{ page.modified | date: "%-d" }}
+        {% case m %}
+          {% when '1' %}Gennaio
+          {% when '2' %}Febbraio
+          {% when '3' %}Marzo
+          {% when '4' %}Aprile
+          {% when '5' %}Maggio
+          {% when '6' %}Giugno
+          {% when '7' %}Luglio
+          {% when '8' %}Agosto
+          {% when '9' %}Settembre
+          {% when '10' %}Ottobre
+          {% when '11' %}Novembre
+          {% when '12' %}Dicembre
+        {% endcase %}
+        {{ page.modified | date: "%Y" }}</time></span>{% endif %}
         {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
