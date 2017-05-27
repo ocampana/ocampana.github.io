@@ -1,8 +1,16 @@
+{% if page.language %}
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ page.language }}"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="{{ page.language }}"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="{{ page.language }}"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope itemtype="http://schema.org/WebPage" lang="{{ page.language }}"><!--<![endif]-->
+{% else %}
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="it"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="it"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="it"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" itemscope itemtype="http://schema.org/WebPage" lang="it"><!--<![endif]-->
+{% endif %}
 <head>
 {% include head.html %}
 </head>
