@@ -33,6 +33,8 @@ Per consultare l’informativa per la privacy della società Google Inc., titola
 
 Al seguente [link](https://tools.google.com/dlpage/gaoptout?hl=it) è inoltre reso disponibile da Google il componente aggiuntivo del browser per la disattivazione di Google Analytics.
 
+In questo sito Google Analytics è stato anonimizzato, disattivando le opzioni che consentano ad Google Analytics di tracciare gli utenti demograficamente. Il cookie di Google Analytics è indicato nell'informativa, ma essendo stato anonimizzato non richiede l'accettazione dell'informativa sui cookie da parte dell'utente.
+
 ### Cookies di Disqus
 
 Disqus usa i cookies per mantenere gli utenti registrati loggati sui vari siti web visitati. Raccoglie inoltre informazioni sull’uso del suo sistema di commenti, che vengono utilizzate per vari scopi. Qui trovate una [spiegazione in inglese](https://help.disqus.com/customer/portal/articles/466235-use-of-cookies).
