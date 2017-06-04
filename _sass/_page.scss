@@ -190,6 +190,10 @@ span + .entry-title {
 .entry-content {
 	@include span-columns(12);
 
+	p {
+		text-align: justify;
+	}
+
 	p:first-child {
 		margin-top: 0;
 	}
