@@ -190,7 +190,7 @@ span + .entry-title {
 .entry-content {
 	@include span-columns(12);
 
-	p {
+	p, li {
 		text-align: justify;
 	}
 

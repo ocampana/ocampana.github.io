@@ -5,7 +5,9 @@ excerpt: "Una serata al Linuxcafé"
 categories: articles
 comments: true
 tags: [linux]
-redirect_from: "/software/linux/linuxcafe"
+redirect_from:
+  - /software/linux/linuxcafe
+  - /home/linux/linuxcafe/postgresql_e_altra_roba.pdf
 ---
 
 ## Una serata al Linuxcafé

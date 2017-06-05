@@ -56,7 +56,7 @@ La configurazione predefinita dei pin è questa
 {: style="text-align: center;"}
 ![Beaglebone Black default pinout](https://beagleboard.org/static/images/cape-headers.png)
 
-Le combinazioni complete sono troppe per poter essere riportate in una unica immagine, però sono riassunte in un [foglio di calcolo](/assetts/files/BBB_Pins.xlsx).
+Le combinazioni complete sono troppe per poter essere riportate in una unica immagine, però sono riassunte in un [foglio di calcolo](/assets/files/BBB_Pins.xlsx).
 
 C'è un dettaglio che rende la scheda non trascurabile: a differenza delle altre, esiste la [versione industriale](https://www.element14.com/community/docs/DOC-78671), con componenti che vanno da -40°C a +85°C. La versione a range di temperatura esteso, unita ad una forma compatta ed ai connettori che rendono semplice l'ancoraggio della scheda, anche munita di espansione, ad una struttura, può già essere usata in qualche progetto industriale reale. Questo non è possibile con la Raspberry, che è molto più debole meccanicamente, ed è un po' tirato anche per la scheda SamA5D3 Xplained.
 
