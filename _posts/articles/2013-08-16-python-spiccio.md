@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "Python spiccio"
-excerpt: "Linux embedded"
+excerpt: "Qualche mia nota su python"
 categories: articles
 comments: true
 modified: 2013-09-11
-tags: [python]
+tags: python
+keywords: python
+modified: 2017-06-07T00:00:00+02:00
 redirect_from: "/software/python-spiccio"
 ---
 

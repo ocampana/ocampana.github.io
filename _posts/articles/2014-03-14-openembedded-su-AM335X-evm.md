@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "OpenEmbedded su AM335X-evm"
-excerpt: "Linux embedded"
+excerpt: "Usare Arago ed OpenEmbedded per sviluppare Linux embedded su AM335X"
 categories: articles
 comments: true
-tags: [linux, embedded]
+tags: linux embedded
+keywords: linux embedded am335x openembedded
+modified: 2017-06-07T00:00:00+02:00
 redirect_from: "/software/linux/openembedded-su-am335x-evm"
 ---
 

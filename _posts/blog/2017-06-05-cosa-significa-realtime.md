@@ -3,7 +3,10 @@ layout: post
 title: "Cosa significa realtime?"
 modified:
 categories: blog
-excerpt: e cosa si può fare in GNU/Linux embedded?
+excerpt: si può realizzare un sistema realtime in GNU/Linux embedded?
+tags: linux embedded realtime
+keywords: linux embedded sistema realtime
+modified: 2017-06-06T00:00:00+02:00
 ---
 
 Ci sono argomenti nella programmazione dei sistemi embedded che sono ricorrenti. Uno di questi argomenti che a volte ritornano sono i sistemi operativi realtime e la discussione se sono implementabili su GNU/Linux embedded o meno.
