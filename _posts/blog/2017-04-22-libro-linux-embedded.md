@@ -6,6 +6,7 @@ categories: blog
 share: true
 comments: true
 excerpt: Il libro che non c'è
+keywords: libro libri linux embedded c networking sistemi operativi
 image:
   feature: Raspberry-Pi-3-top-down-web.jpg
   credit: Raspberry Pi Foundation

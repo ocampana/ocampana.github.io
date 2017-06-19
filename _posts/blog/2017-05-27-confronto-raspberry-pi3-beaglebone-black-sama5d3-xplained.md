@@ -5,6 +5,7 @@ modified:
 categories: blog
 share: true
 comments: true
+keywords: beaglebone black raspberry pi3 sama5d3 xplained embedded linux
 excerpt: Valutazione su quale scheda basare il libro.
 ---
 

@@ -4,7 +4,8 @@ title: "Il criterio di Johnson"
 excerpt: "Come valutare le prestazioni di un dispositivo di videosorveglianza intermini di distanza"
 categories: articles
 comments: true
-tags: [cctv]
+tags: cctv
+keyworks: criterio johnson cctv
 share: true
 ---
 
