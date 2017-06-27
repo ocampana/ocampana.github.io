@@ -194,11 +194,11 @@ user@debian:~/poky/bbb$
 ```
 
 Molti di qeusti file sono link simbolici, per avviare il sistema nella beaglebone black saranno necessari i seguenti file:
-* MLO
-* u-boot.img
-* zImage
-* zImage-bbb-nohdmi.dtb
-* core-image-minimal-beaglebone.tar.xz
+* `MLO`
+* `u-boot.img`
+* `zImage`
+* `zImage-bbb-nohdmi.dtb`
+* `core-image-minimal-beaglebone.tar.xz`
 
 A cosa servono e come usare questi file per popolare una microSD sarà l'aromento del prossimo post.
 
@@ -206,7 +206,7 @@ A cosa servono e come usare questi file per popolare una microSD sarà l'aroment
 
 |Repository|Nome branch|Commit ID|
 | :- | :- | :- |
-|poky|pyro|9074fb46bc2a6da92334df068dbcc8cf8efbb6dc|
-|meta-bbb|pyro|b84b65a7adb76f9871731286db26a525ac8ae378|
-|meta-qt5|master|3ae86cb32edd1449f702e0a094929ae9b21ce191|
-|meta-openembedded|pyro|5e82995148a2844c6f483ae5ddd1438d87ea9fb7|
+|poky|pyro|`9074fb46bc2a6da92334df068dbcc8cf8efbb6dc`|
+|meta-bbb|pyro|`b84b65a7adb76f9871731286db26a525ac8ae378`|
+|meta-qt5|master|`3ae86cb32edd1449f702e0a094929ae9b21ce191`|
+|meta-openembedded|pyro|`5e82995148a2844c6f483ae5ddd1438d87ea9fb7`|
