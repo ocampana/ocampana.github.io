@@ -44,12 +44,12 @@ Nel caso della beaglebone, il funzionamento di questi pin è illustrato nella pa
 |_fissi_|`11100b`|MMC1, MMC0, UART0, USB0|
 |_fissi_|`11000b`|SPI0, MMC0, USB0, UART0|
 
-Come si può vedere a pagina 8 degli schematici per la eMMC e a pagina 11 per la microSD, la eMMC è connessa ad MMC1 e la microSD è connessa a MMC0. Sempre a pagine 6 si può vedere come è connesso il bottone `uSD BOOT`. Quando viene premuto porta il bit `SYSBOOT[2]` a 0 e quindi viene eseguita la seconda sequenza di boot, che va a ricercare il bootloader di secondo livello nella MMC0, mentre se non viene premuto il bit `SYSBOOT[2]` varrà 1 e quindi verrà eseguita la prima sequenza di boot, ch darà priorità al boot ad eMMC rispetto a quello da microSD. Le beaglebone sono tutte in vendita con un sistema linux embedded già programmato nella eMMC, quindi a meno di non cancellare la eMMC, se il bottone `uSD BOOT` non viene premuto il sistema partirà sempre da eMMC. In questo caso, volendo avviare un sistema custom da microSD, sarà sempre necessario accendere la beaglebone black tenendo premuto il bottone di boot da microSD.
+Come si può vedere a pagina 8 degli schematici per la eMMC e a pagina 11 per la microSD, la eMMC è connessa ad MMC1 e la microSD è connessa a MMC0. Sempre a pagina 6 si può vedere come è connesso il bottone `uSD BOOT`. Quando viene premuto porta il bit `SYSBOOT[2]` a 0 e quindi viene eseguita la seconda sequenza di boot, che va a ricercare il bootloader di secondo livello nella MMC0, mentre se non viene premuto il bit `SYSBOOT[2]` varrà 1 e quindi verrà eseguita la prima sequenza di boot, ch darà priorità al boot ad eMMC rispetto a quello da microSD. Le beaglebone sono tutte in vendita con un sistema linux embedded già programmato nella eMMC, quindi a meno di non cancellare la eMMC, se il bottone `uSD BOOT` non viene premuto il sistema partirà sempre da eMMC. In questo caso, volendo avviare un sistema custom da microSD, sarà sempre necessario accendere la beaglebone black tenendo premuto il bottone di boot da microSD.
 
 |![descrizione delle interfacce dell beaglebone black](/images/beaglebone-black-interfaces.jpg)|
 |Il bottone `uSD BOOT` è il `boot button` in questa immagine.|
 
-Nel caso di boot sa microSD, il ROM code cerca la prima partizione formattata in FAT32 e carica il file MLO contenuto in essa. Il file MLO contiene il bootloader di secondo livello ed alcuni byte di intestazione che istruiscono il ROM code sulla dimensione del file e l'indirizzo di memoria dove questo programma deve essere caricato.
+Nel caso di boot da microSD, il ROM code cerca la prima partizione formattata in FAT32 e carica il file MLO contenuto in essa. Il file MLO contiene il bootloader di secondo livello ed alcuni byte di intestazione che istruiscono il ROM code sulla dimensione del file e l'indirizzo di memoria dove questo programma deve essere caricato.
 
 ## x-loader, il bootloader di secondo livello detto anche Secondary Program Loader (SPL)
 
