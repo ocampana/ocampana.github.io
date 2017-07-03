@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cookies
-excerpt: "Informativa estesa"
+excerpt: "Informativa estesaper la privacy sui cookies"
 modified: 2017-03-17T13:14:30.564948+01:00
 redirect_from:
   - /home/condizioni_privacy
