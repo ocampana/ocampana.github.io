@@ -7,6 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
+modified: 2017-07-13T00:00:00+02:00
 ---
 
 
@@ -31,6 +32,9 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
         <option value="flir_46640013HSPNLX">Flir Tau2 640x480 13mm</option>
         <option value="flir_46640060HSPNLX">Flir Tau2 640x480 60mm</option>
+        <option value="flir_lepton_50">Flir Lepton 80x60 50mm</option>
+        <option value="flir_lepton_25">Flir Lepton 80x60 25mm</option>
+        <option value="flir_lepton3_50">Flir Lepton3 160x120 50mm</option>
       </select>
     </td>
   </tr>
@@ -149,6 +153,27 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 640;
     document.querySelector('#angolo_tele_verticale').value = 4.15;
     document.querySelector('#angolo_tele_orizzontale').value = 5.2;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton_50')
+  {
+    document.querySelector('#risoluzione_verticale').value = 80;
+    document.querySelector('#risoluzione_orizzontale').value = 60;
+    document.querySelector('#angolo_tele_verticale').value = 25.5;
+    document.querySelector('#angolo_tele_orizzontale').value = 18.75;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton_25')
+  {
+    document.querySelector('#risoluzione_verticale').value = 80;
+    document.querySelector('#risoluzione_orizzontale').value = 60;
+    document.querySelector('#angolo_tele_verticale').value = 12.5;
+    document.querySelector('#angolo_tele_orizzontale').value = 9.37;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton3_50')
+  {
+    document.querySelector('#risoluzione_verticale').value = 160;
+    document.querySelector('#risoluzione_orizzontale').value = 120;
+    document.querySelector('#angolo_tele_verticale').value = 28;
+    document.querySelector('#angolo_tele_orizzontale').value = 21;
   }
 
   if (aggiorna_dati)

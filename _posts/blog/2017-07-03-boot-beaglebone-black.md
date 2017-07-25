@@ -156,7 +156,7 @@ uenvcmd=if run loadfdt; then echo Loaded ${fdtfile}; if run loadimage; then run 
 
 ```
 
-Il file `uEnv.txt` contiene la configurazione di u-boot. Se non è presente u-boot userà i parametri hard coded che gli sono stati passati durante la compilazione. La spiegazione dettagliata dei parametri presenti in questo file verrà esposta in nu prossimo post. **ATTENZIONE**: onde evitare problemi vari di compatibilità co alcune versioni di uboot, il file `uEnv.txt` deve essere salvato in formato Unix e deve avere come ultima riga una riga vuota.
+Il file `uEnv.txt` contiene la configurazione di u-boot. Se non è presente u-boot userà i parametri hard coded che gli sono stati passati durante la compilazione. La spiegazione dettagliata dei parametri presenti in questo file verrà esposta in un prossimo post. **ATTENZIONE**: onde evitare problemi vari di compatibilità con alcune versioni di uboot, il file `uEnv.txt` deve essere salvato in formato Unix e deve avere come ultima riga una riga vuota.
 
 La preparazione della partizione ext2 è molto più semplice, perché basta copiare il file `core-image-minimal-beaglebone.tar.xz` dentro alla partizione montata, posizionarsi nella directory dove è il file e lanciare il comando `tar xJfv core-image-minimal-beaglebone.tar.xz` . Notate come file è compresso con `xz` e non con i classici `gzip` o `bzip2`, quindi il flag per decomprimere questo tipo di archivio è `J`.
 
