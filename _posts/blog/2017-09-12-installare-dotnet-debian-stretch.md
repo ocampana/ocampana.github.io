@@ -8,7 +8,7 @@ tags: linux c# dotnet development
 keywords: linux c# dotnet development
 ---
 
-Agli arbori di Linux, Microsoft era vista come un nemico. Dopo anni di lotta, Microsoft ha iniziato ad essere pià aperta verso altri sistemi operativi, in primis verso Linux.
+Agli albori di Linux, Microsoft era vista come un nemico. Dopo anni di lotta, Microsoft ha iniziato ad essere pià aperta verso altri sistemi operativi, in primis verso Linux.
 
 Questa estate Microsoft ha rilasciato il [.Net Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/). Il linguaggio mi ha sempre incuriosito, però non mi sono mai trovato bene con [Mono](http://www.mono-project.com/), il compilatore opensource per C# perché non supporta tutte le librerie di sistema di .Net. Con la nuova release di .Net e l'annuncio in grande stile del supporto della piattaforma Linux ho deciso di fare una prova.
 
