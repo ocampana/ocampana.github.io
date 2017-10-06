@@ -163,4 +163,4 @@ In questo modo viene scompattato il pacchetto nuovo, ma per aggiornare il softwa
 
 Nella versione 7.3.0 di fine Settembre 2017 è stata introdotta la possibilità di citare gli utenti con `@nome` come nella suite Atlassian. Per fine Novembre 2017 è prevista la versione 7.4 che avrà altre evoluzioni minori, mentre per Marzo 2018 è previsto il rilascio di OpenProject 8.0 con un editor WYSIWYG per il wiki.
 
-Per chi fosse interessato è possibile fare riferimento alla [https://community.openproject.com/projects/openproject/timelines/62](roadmap) ed alla [development timeline](https://community.openproject.com/projects/openproject/timelines/36) del progetto.
+Per chi fosse interessato è possibile fare riferimento alla [roadmap](https://community.openproject.com/projects/openproject/timelines/62) ed alla [development timeline](https://community.openproject.com/projects/openproject/timelines/36) del progetto.
