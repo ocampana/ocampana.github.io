@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Come installare OpenProject su GNU/Debian Jessie"
-modified:
+modified: 2017-10-05T00:00:00+02:00
 categories: blog
 excerpt: una alternativa opensource a Jira
 tags: linux development
@@ -148,3 +148,19 @@ e riavviare postfix. L'ultima porta da sistemare è la 111, occupata dal process
 ```bash
 root@debian:~# dpkg --purge rpcbind nfs-common
 ```
+
+## Aggiornamento
+
+&Egrave; stata rilasciata la versione 7.3.0 di OpenProject. La procedura di aggiornamento è semplice, ma richede un minimo di attenzione. Servono i seguenti comandi:
+
+```bash
+root@debian:~# apt-get update
+root@debian:~# apt-get install --only-upgrade openproject
+root@debian:~# apt-get openproject configure
+```
+
+In questo modo viene scompattato il pacchetto nuovo, ma per aggiornare il software viene usato il comando `openproject configure` che provvedere ad applicare tutte le migrazioni del database, se necessario.
+
+Nella versione 7.3.0 di fine Settembre 2017 è stata introdotta la possibilità di citare gli utenti con `@nome` come nella suite Atlassian. Per fine Novembre 2017 è prevista la versione 7.4 che avrà altre evoluzioni minori, mentre per Marzo 2018 è previsto il rilascio di OpenProject 8.0 con un editor WYSIWYG per il wiki.
+
+Per chi fosse interessato è possibile fare riferimento alla [https://community.openproject.com/projects/openproject/timelines/62](roadmap) ed alla [development timeline](https://community.openproject.com/projects/openproject/timelines/36) del progetto.

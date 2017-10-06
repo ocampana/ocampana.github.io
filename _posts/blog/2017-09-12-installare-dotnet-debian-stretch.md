@@ -3,7 +3,7 @@ layout: post
 title: "Come installare dotnet su GNU/Debian Stretch"
 modified:
 categories: blog
-excerpt: Un piccolo esperimento, visot che tutto lo stack è stato portato su GNU/Linux
+excerpt: Un piccolo esperimento, visto che tutto il core è stato portato su GNU/Linux
 tags: linux c# dotnet development
 keywords: linux c# dotnet development
 ---
