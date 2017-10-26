@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Come installare OpenProject su GNU/Debian Jessie"
-modified: 2017-10-05T00:00:00+02:00
+modified: 2017-10-26T00:00:00+02:00
 categories: blog
 excerpt: una alternativa opensource a Jira
 tags: linux development
@@ -156,7 +156,7 @@ root@debian:~# dpkg --purge rpcbind nfs-common
 ```bash
 root@debian:~# apt-get update
 root@debian:~# apt-get install --only-upgrade openproject
-root@debian:~# apt-get openproject configure
+root@debian:~# openproject configure
 ```
 
 In questo modo viene scompattato il pacchetto nuovo, ma per aggiornare il software viene usato il comando `openproject configure` che provvedere ad applicare tutte le migrazioni del database, se necessario.
