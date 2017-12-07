@@ -7,7 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
-modified: 2017-07-13T00:00:00+02:00
+modified: 2017-12-07T00:00:00+02:00
 ---
 
 
@@ -29,6 +29,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <td>
       <select id="telecamera" name="telecamera" style="width:100%;">
         <option value="sony_fcb_ev7520">Sony FCB-EV7520</option>
+        <option value="sony_fcb_se600">Sony FCB-SE600</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
         <option value="flir_46640013HSPNLX">Flir Tau2 640x480 13mm</option>
         <option value="flir_46640060HSPNLX">Flir Tau2 640x480 60mm</option>
@@ -132,6 +133,13 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.3;
     document.querySelector('#angolo_tele_orizzontale').value = 2.3;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_se600')
+  {
+    document.querySelector('#risoluzione_verticale').value = 1080;
+    document.querySelector('#risoluzione_orizzontale').value = 1920;
+    document.querySelector('#angolo_tele_verticale').value = 18;
+    document.querySelector('#angolo_tele_orizzontale').value = 32;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46336013HSPNLX')
   {
