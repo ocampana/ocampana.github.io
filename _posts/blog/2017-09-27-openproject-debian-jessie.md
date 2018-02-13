@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Come installare OpenProject su GNU/Debian Jessie"
-modified: 2017-10-26T00:00:00+02:00
+modified: 2018-02-13T00:00:00+02:00
 categories: blog
 excerpt: una alternativa opensource a Jira
 tags: linux development
@@ -62,7 +62,18 @@ root@debian:~# crontab -e
 * 7,19 * * * certbot -q renew
 ```
 
-e dimenticarsi del rinnovo dei certificati. Fatto questo è il momento di installare OpenProject:
+e dimenticarsi del rinnovo dei certificati. Vale la pena notare che ad ogni rinnovo verranno generati dei vecchi certificati, con numero progressivo incrementato di uno. Quindi al primo rinnovo nella directory `/etc/letsencrypt/archive/nome.sito.it/` troveremo questi file
+
+```bash
+root@debian:~# ls /etc/letsencrypt/archive/nome.sito.it/
+cert1.pem  chain1.pem  fullchain1.pem  privkey1.pem
+cert2.pem  chain2.pem  fullchain2.pem  privkey2.pem
+root@debian:~#
+```
+
+Per evitare problemi al rinnovo, nei passaggi successivi verrà usata la directory `/etc/letsencrypt/live/nome.sito.it/`, che contiene link simbolici sempre aggiornati all'ultimo certificato generato.
+
+Fatto questo è il momento di installare OpenProject:
 
 ```bash
 root@debian:~# apt-get install openproject
@@ -78,8 +89,8 @@ root@debian:~# openproject configure
 Il programma di configurazione è molto ricco, io di solito scelgo di:
 * installare mysql
 * installare apache2, che chiede il fully qualified domain name (FQDN) del sito, in questo caso _nome.sito.it_ , non specifico nessun server path prefix perché ho un server ad hoc per usare OpenProject ed abilito ssl
-* come file del certificato ssl imposto `/etc/letsencrypt/archive/nome.sito.it/cert1.pem`
-* come chiave del certificato imposto `/etc/letsencrypt/archive/nome.sito.it/privkey1.pem` come chiave ,
+* come file del certificato ssl imposto `/etc/letsencrypt/live/nome.sito.it/cert.pem`
+* come chiave del certificato imposto `/etc/letsencrypt/live/nome.sito.it/privkey.pem` come chiave ,
 * non aggiungo alcuni CA bundle, perché in Debian c'è già il file `/etc/ssl/certs/ISRG_Root_X1.pem` , che è il certificato di Internet Security Research Group, ovvero la fondazione a capo di Let's Encrypt
 * installare svn
 * installare git
