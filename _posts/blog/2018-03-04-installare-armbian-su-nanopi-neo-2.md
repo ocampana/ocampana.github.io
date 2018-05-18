@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installare armbian sulla scheda nanopi neo 2
+title: "Installare armbian sulla scheda nanopi neo 2"
 modified:
 categories: blog
 excerpt:
