@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Installare armbian sulla scheda nanopi neo 2"
+title: "Installare Armbian sulla scheda nanopi neo 2"
 modified:
 categories: blog
-excerpt:
+excerpt: cosa è Armbian?
 tags: linux embedded armbian
 keywords: linux embedded armbian
 ---
