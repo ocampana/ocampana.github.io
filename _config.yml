@@ -15,11 +15,12 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-redirect-from
-  - jekyll-pages
+  - jekyll-feed
+  - github-pages
 
 kramdown:
   input: GFM
