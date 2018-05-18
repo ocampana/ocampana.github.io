@@ -19,7 +19,7 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-redirect-from
-#  - jekyll-feed
+  - jekyll-pages
 
 kramdown:
   input: GFM
