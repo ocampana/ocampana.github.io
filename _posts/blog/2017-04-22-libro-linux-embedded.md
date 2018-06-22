@@ -1,4 +1,5 @@
 ---
+language: it
 layout: post
 title: "Un libro su GNU/Linux embedded"
 modified:
