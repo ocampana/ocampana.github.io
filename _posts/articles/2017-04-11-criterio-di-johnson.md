@@ -28,6 +28,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <th>Telecamera</th>
     <td>
       <select id="telecamera" name="telecamera" style="width:100%;">
+        <option value="videotec_vcmhd30x01">Sony VCMHD30X01</option>
         <option value="sony_fcb_ev7520">Sony FCB-EV7520</option>
         <option value="sony_fcb_se600">Sony FCB-SE600</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
@@ -182,6 +183,13 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 120;
     document.querySelector('#angolo_tele_verticale').value = 28;
     document.querySelector('#angolo_tele_orizzontale').value = 21;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'videotec_vcmhd30x01')
+  {
+    document.querySelector('#risoluzione_verticale').value = 180;
+    document.querySelector('#risoluzione_orizzontale').value = 1920;
+    document.querySelector('#angolo_tele_verticale').value = 1.32;
+    document.querySelector('#angolo_tele_orizzontale').value = 4.36;
   }
 
   if (aggiorna_dati)
