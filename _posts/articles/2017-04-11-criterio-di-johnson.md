@@ -7,7 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
-modified: 2017-12-07T00:00:00+02:00
+modified: 2018-07-25T00:00:00+02:00
 ---
 
 
@@ -28,7 +28,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <th>Telecamera</th>
     <td>
       <select id="telecamera" name="telecamera" style="width:100%;">
-        <option value="videotec_vcmhd30x01">Sony VCMHD30X01</option>
+        <option value="videotec_vcmhd30x01">Videotec VCMHD30X01</option>
         <option value="sony_fcb_ev7520">Sony FCB-EV7520</option>
         <option value="sony_fcb_se600">Sony FCB-SE600</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
