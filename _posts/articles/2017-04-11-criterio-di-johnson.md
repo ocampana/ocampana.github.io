@@ -186,10 +186,10 @@ function aggiorna_telecamera (aggiorna_dati)
   }
   else if (document.querySelector('#telecamera option:checked').value == 'videotec_vcmhd30x01')
   {
-    document.querySelector('#risoluzione_verticale').value = 180;
+    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.32;
-    document.querySelector('#angolo_tele_orizzontale').value = 4.36;
+    document.querySelector('#angolo_tele_orizzontale').value = 2.36;
   }
 
   if (aggiorna_dati)
