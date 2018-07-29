@@ -22,14 +22,14 @@ Il giorno della proclamazione Giacomo Tomezzoli, un mio compagno di corso eletto
 > Cari ingegneri e non ingegneri (perché se una cosa mi è parsa chiara da subito frequentando queste aule è che questa divisione in caste esiste, una iattura per gli ingegneri), è un onore per me rappresentare i diplomandi dell’EMBA 14 e poi capirete il motivo. Non preoccupatevi, nessuna presentazione ad effetti speciali oggi, ma qualche riflessione, qualche PERCHE’. Spero capace di dare una traccia di un viaggio, importante, che abbiamo fatto e che faremo.
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_1.png)
+> ![Una breve storia](/images/discorso_emba14_1.png)
 >
 > Per fare sintesi e farci un augurio, per raccontarci che cosa alla fine ci siamo portati a casa, ho deciso di recuperare ed adattare una storia che mi ha affascinato molto e che ritengo possa essere condivisa in questa occasione, magari qualcuno di voi l’ha già sentita. E’ una storia utilizzata nel talent management, è la storia di un ragazzino, un ragazzino che giocava a calcio per le strade e le piazze della sua città, fino ad arrivare ai campetti di periferia e poi sulla cima del mondo. La storia racconta che questo ragazzino tirasse con il piede destro, provasse – in sostanza - a fare tutto ciò che facevano i suoi coetanei. Fino al giorno in cui un signore, che lo osservava da bordo campo, gli disse: perché non provi con il piede sinistro? Scoprirai il tuo vero talento. E così fu, quel ragazzino diventò un giocatore, un campione, un fuoriclasse per l’esattezza, che arrivò a fare probabilmente il gol più bello nella storia del calcio moderno, con ben 11 tocchi di palla fatti col solo piede sinistro, il suo più autentico talento.
 >
 > Lasciamolo lì, per un momento, quel ragazzino, e proviamo ora a ripercorrere un’altra storia, brevemente, quella che ci ha cambiato, quella di questi 20 mesi intensi all’interno di questo magnifico contesto.
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_2.png)
+> ![Che cosa è stata la onstra storia](/images/discorso_emba14_2.png)
 >
 > Che cosa è stato l’EMBA? I nostri amici, parenti e colleghi se lo immaginano? Quando siamo arrivati non lo sapevamo cosa sarebbe diventato per noi. In queste aule, in una delle business school più antiche d’Italia tutto ha avuto corso come farebbe un torrente in piena.
 >
@@ -40,7 +40,7 @@ Il giorno della proclamazione Giacomo Tomezzoli, un mio compagno di corso eletto
 > Se è difficile spiegare COSA sia stato proviamo allora a raccontarvi COME è stato questo MBA? Non posso certo dirlo io, lo possono solo dire tutti loro, i miei colleghi.
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_3.png)
+> ![Come è stata la nostra storia](/images/discorso_emba14_3.png)
 >
 > Che cosa è stato l’EMBA? I nostri amici, parenti e colleghi se lo immaginano? Quando siamo arrivati non lo sapevamo cosa sarebbe diventato per noi. In queste aule, in una delle business school più antiche d’Italia tutto ha avuto corso come farebbe un torrente in piena.
 > 1. Acceleratore per Umberto ➡️ lavoratore instancabile
@@ -77,7 +77,7 @@ Il giorno della proclamazione Giacomo Tomezzoli, un mio compagno di corso eletto
 > Che cosa ci portiamo a casa? Possiamo tornare ora a quel ragazzino su quel campetto di periferia, archètipo di una storia che oggi ci appartiene più che mai.
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_4.png)
+> ![Cosa sarà la nostra storia](/images/discorso_emba14_4.png)
 >
 > Tutti noi siamo arrivati qui che sapevamo usare il nostro piede destro, anche bene direi: gli ingegneri di produzione sapevano fare gli ingegneri di produzione, i commerciali sapevano vendere, i tecnici sapevano fare i tecnici, i contabili sapevano che investimenti a lungo richiedono fonti a lungo, e così via. Siamo arrivati qui perché ci siamo resi conto che non volevamo più incaponirci solo con il nostro piede destro – questa è la verità - avevamo bisogno di coltivare nuovi talenti, perché solo con nuovi talenti potevamo puntare all’eccellenza. E così oggi chi sapeva gestire reparti di produzione sa anche di contabilità aziendale, chi gestiva una rete di fornitura sa anche comprendere le dinamiche del mercato, chi aveva cura dei clienti comprende anche le esigenze di un conto economico e di uno stabilimento produttivo, chi faceva marketing sa anche come è fatta un’impresa oltre che come sia fatto un sondaggio. Tutti hanno aggiunto talenti, hanno imparato ad usare meglio il loro piede destro, certamente, ma possono ambire a tirare anche con il loro piede sinistro, chissà forse fino ad arrivare un giorno anch’essi sulla cima del mondo.
 >
@@ -86,7 +86,7 @@ Il giorno della proclamazione Giacomo Tomezzoli, un mio compagno di corso eletto
 > Fatemi dire: i nostri figli nel 40% dei casi potrebbero fare un lavoro che oggi nemmeno esiste.
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_5.png)
+> ![I migliore manager mancini](/images/discorso_emba14_5.png)
 >
 > Vediamo se da qualcuno di questi FANTASTICI MANAGER MANCINI nascerà un’innovazione tanto importante.
 >
@@ -95,7 +95,7 @@ Il giorno della proclamazione Giacomo Tomezzoli, un mio compagno di corso eletto
 > Grazie al Prof. Vinelli per la professionalità, ad Alessia e allo staff per quanto fatto, ai docenti tutti. Grazie ai miei colleghi ai quali rivolgo un invito: mai perdersi di vista!!!
 >
 > {: style="text-align: center; width:100%"}
-> ![Il lancio dei cappelli dell'eMBA14](/images/discorso_emba14_6.png)
+> ![Stop wondering about wath's next](/images/discorso_emba14_6.png)
 >
 > e grazie a tutti voi per aver ascoltato un manager mancino.
 >
