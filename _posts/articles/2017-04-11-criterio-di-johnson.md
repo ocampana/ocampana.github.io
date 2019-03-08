@@ -7,7 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
-modified: 2018-07-25T00:00:00+02:00
+modified: 2019-03-22T00:00:00+02:00
 ---
 
 
@@ -29,6 +29,9 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <td>
       <select id="telecamera" name="telecamera" style="width:100%;">
         <option value="videotec_vcmhd30x01">Videotec VCMHD30X01</option>
+        <option value="sony_fcb_ev7100">Sony FCB-EV7100</option>
+        <option value="sony_fcb_ev7300">Sony FCB-EV7300</option>
+        <option value="sony_fcb_ev7500">Sony FCB-EV7500</option>
         <option value="sony_fcb_ev7520">Sony FCB-EV7520</option>
         <option value="sony_fcb_se600">Sony FCB-SE600</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
@@ -134,6 +137,27 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.3;
     document.querySelector('#angolo_tele_orizzontale').value = 2.3;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7500')
+  {
+    document.querySelector('#risoluzione_verticale').value = 1080;
+    document.querySelector('#risoluzione_orizzontale').value = 1920;
+    document.querySelector('#angolo_tele_verticale').value = 1.3;
+    document.querySelector('#angolo_tele_orizzontale').value = 2.3;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7300')
+  {
+    document.querySelector('#risoluzione_verticale').value = 1080;
+    document.querySelector('#risoluzione_orizzontale').value = 1920;
+    document.querySelector('#angolo_tele_verticale').value = 1.85;
+    document.querySelector('#angolo_tele_orizzontale').value = 3.3;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7100')
+  {
+    document.querySelector('#risoluzione_verticale').value = 1080;
+    document.querySelector('#risoluzione_orizzontale').value = 1920;
+    document.querySelector('#angolo_tele_verticale').value = 4.725;
+    document.querySelector('#angolo_tele_orizzontale').value = 7.6;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_se600')
   {
