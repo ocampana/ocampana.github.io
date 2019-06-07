@@ -7,7 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
-modified: 2019-03-22T00:00:00+02:00
+modified: 2019-06-07T00:00:00+02:00
 ---
 
 
@@ -34,6 +34,8 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="sony_fcb_ev7500">Sony FCB-EV7500</option>
         <option value="sony_fcb_ev7520">Sony FCB-EV7520</option>
         <option value="sony_fcb_se600">Sony FCB-SE600</option>
+        <option value="sony_fcb_ex1020p">Sony FCB-EX1020P</option>
+        <option value="sony_fcb_ex1020">Sony FCB-EX1020</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
         <option value="flir_46640013HSPNLX">Flir Tau2 640x480 13mm</option>
         <option value="flir_46640060HSPNLX">Flir Tau2 640x480 60mm</option>
@@ -165,6 +167,20 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 18;
     document.querySelector('#angolo_tele_orizzontale').value = 32;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ex1020p')
+  {
+    document.querySelector('#risoluzione_verticale').value = 576;
+    document.querySelector('#risoluzione_orizzontale').value = 720;
+    document.querySelector('#angolo_tele_verticale').value = 1.275;
+    document.querySelector('#angolo_tele_orizzontale').value = 1.7;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ex1020')
+  {
+    document.querySelector('#risoluzione_verticale').value = 480;
+    document.querySelector('#risoluzione_orizzontale').value = 720;
+    document.querySelector('#angolo_tele_verticale').value = 1.275;
+    document.querySelector('#angolo_tele_orizzontale').value = 1.7;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46336013HSPNLX')
   {
