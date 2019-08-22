@@ -65,19 +65,19 @@ function aggiorna_distanze ()
   var res = document.querySelector('#risoluzione_orizzontale').value;
   var angolo = document.querySelector('#angolo_tele_orizzontale').value;
 
-  var d_monitoring = Math.round ( (res / (2 * 12) ) / (Math.tan (angolo * Math.PI / 180.00) );
+  var d_monitoring = Math.round ( (res / (2 * 12) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#monitoring').value = d_detection;
 
-  var d_detection = Math.round ( (res / (2 * 25) ) / (Math.tan (angolo * Math.PI / 180.00) );
+  var d_detection = Math.round ( (res / (2 * 25) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#detection').value = d_detection;
 
-  var d_observation = Math.round ( (res / (2 * 62) ) / (Math.tan (angolo * Math.PI / 180.00) );
+  var d_observation = Math.round ( (res / (2 * 62) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#observation').value = d_observation;
 
-  var d_recognition = Math.round ( (res / (2 * 125) ) / (Math.tan (angolo * Math.PI / 180.00) );
+  var d_recognition = Math.round ( (res / (2 * 125) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#recognition').value = d_recognition;
 
-  var d_identification = Math.round ( (res / (2 * 250) ) / (Math.tan (angolo * Math.PI / 180.00) );
+  var d_identification = Math.round ( (res / (2 * 250) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#identification').value = d_identification;
 }
 
