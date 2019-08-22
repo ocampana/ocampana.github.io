@@ -10,7 +10,7 @@ share: true
 ---
 
 
-## Calcolatore
+## Calcolatore distanze
 
 Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sistema di visione, secondo la norma EN/IEC 62676-4.
 
@@ -195,4 +195,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Spiegazione della norma EN/IEC 62676-4
 
-Pippo
