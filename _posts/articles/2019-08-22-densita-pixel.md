@@ -194,4 +194,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 ## Spiegazione della norma EN/IEC 62676-4
-
