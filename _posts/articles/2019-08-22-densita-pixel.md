@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "La densit&agrave; di pixel e la noram EN/IEC 62676-4"
+title: "La densit&agrave; di pixel e la norma EN/IEC 62676-4"
 excerpt: "Il successore al criterio di Johnson per comparare i sistemi di videosorveglianza"
 categories: articles
 comments: true
