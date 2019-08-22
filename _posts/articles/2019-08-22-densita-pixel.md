@@ -40,8 +40,8 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <td><input id="monitoring" type="text" /></td>
   </tr>
   <tr>
-    <th><div style="overflow: hidden; white-space: nowrap;">Risoluzione verticale</div></th>
-    <td><input type="text" id="risoluzione_verticale" name="risoluzione_verticale" readonly /></td>
+    <th><div style="overflow: hidden; white-space: nowrap;">Risoluzione orizzontale</div></th>
+    <td><input type="text" id="risoluzione_verticale" name="risoluzione_orizzontale" readonly /></td>
     <th><div style="overflow: hidden; white-space: nowrap;">Orientation (m)</div></th>
     <td><input id="observation" type="text" /></td>
   </tr>
@@ -85,98 +85,84 @@ function aggiorna_telecamera (aggiorna_dati)
 {
   if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7520')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.3;
     document.querySelector('#angolo_tele_orizzontale').value = 2.3;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7500')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.3;
     document.querySelector('#angolo_tele_orizzontale').value = 2.3;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7300')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.85;
     document.querySelector('#angolo_tele_orizzontale').value = 3.3;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ev7100')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 4.725;
     document.querySelector('#angolo_tele_orizzontale').value = 7.6;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_se600')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 18;
     document.querySelector('#angolo_tele_orizzontale').value = 32;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ex1020p')
   {
-    document.querySelector('#risoluzione_verticale').value = 576;
     document.querySelector('#risoluzione_orizzontale').value = 720;
     document.querySelector('#angolo_tele_verticale').value = 1.275;
     document.querySelector('#angolo_tele_orizzontale').value = 1.7;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'sony_fcb_ex1020')
   {
-    document.querySelector('#risoluzione_verticale').value = 480;
     document.querySelector('#risoluzione_orizzontale').value = 720;
     document.querySelector('#angolo_tele_verticale').value = 1.275;
     document.querySelector('#angolo_tele_orizzontale').value = 1.7;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46336013HSPNLX')
   {
-    document.querySelector('#risoluzione_verticale').value = 256;
     document.querySelector('#risoluzione_orizzontale').value = 336;
     document.querySelector('#angolo_tele_verticale').value = 9.5;
     document.querySelector('#angolo_tele_orizzontale').value = 12.5;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46640013HSPNLX')
   {
-    document.querySelector('#risoluzione_verticale').value = 480;
     document.querySelector('#risoluzione_orizzontale').value = 640;
     document.querySelector('#angolo_tele_verticale').value = 18.5;
     document.querySelector('#angolo_tele_orizzontale').value = 22.5;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46640060HSPNLX')
   {
-    document.querySelector('#risoluzione_verticale').value = 480;
     document.querySelector('#risoluzione_orizzontale').value = 640;
     document.querySelector('#angolo_tele_verticale').value = 4.15;
     document.querySelector('#angolo_tele_orizzontale').value = 5.2;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton_50')
   {
-    document.querySelector('#risoluzione_verticale').value = 80;
     document.querySelector('#risoluzione_orizzontale').value = 60;
     document.querySelector('#angolo_tele_verticale').value = 25.5;
     document.querySelector('#angolo_tele_orizzontale').value = 18.75;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton_25')
   {
-    document.querySelector('#risoluzione_verticale').value = 80;
     document.querySelector('#risoluzione_orizzontale').value = 60;
     document.querySelector('#angolo_tele_verticale').value = 12.5;
     document.querySelector('#angolo_tele_orizzontale').value = 9.37;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_lepton3_50')
   {
-    document.querySelector('#risoluzione_verticale').value = 160;
     document.querySelector('#risoluzione_orizzontale').value = 120;
     document.querySelector('#angolo_tele_verticale').value = 28;
     document.querySelector('#angolo_tele_orizzontale').value = 21;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'videotec_vcmhd30x01')
   {
-    document.querySelector('#risoluzione_verticale').value = 1080;
     document.querySelector('#risoluzione_orizzontale').value = 1920;
     document.querySelector('#angolo_tele_verticale').value = 1.32;
     document.querySelector('#angolo_tele_orizzontale').value = 2.36;
