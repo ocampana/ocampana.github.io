@@ -41,7 +41,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
   </tr>
   <tr>
     <th><div style="overflow: hidden; white-space: nowrap;">Risoluzione orizzontale</div></th>
-    <td><input type="text" id="risoluzione_verticale" name="risoluzione_orizzontale" readonly /></td>
+    <td><input type="text" id="risoluzione_orizzontale" name="risoluzione_orizzontale" readonly /></td>
     <th><div style="overflow: hidden; white-space: nowrap;">Orientation (m)</div></th>
     <td><input id="observation" type="text" /></td>
   </tr>
