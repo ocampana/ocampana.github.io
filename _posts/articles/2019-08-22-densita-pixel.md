@@ -29,8 +29,17 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="sony_fcb_ex1020p">Sony FCB-EX1020P</option>
         <option value="sony_fcb_ex1020">Sony FCB-EX1020</option>
         <option value="flir_46336013HSPNLX">Flir Tau2 336x256 13mm</option>
-        <option value="flir_46640013HSPNLX">Flir Tau2 640x480 13mm</option>
-        <option value="flir_46640060HSPNLX">Flir Tau2 640x480 60mm</option>
+        <option value="flir_46640013HSPNLX">Flir Tau2 640x512 13mm</option>
+        <option value="flir_46336019HSPNLX">Flir Tau2 336x256 19mm</option>
+        <option value="flir_46640019HSPNLX">Flir Tau2 640x512 19mm</option>
+        <option value="flir_46336025HSPNLX">Flir Tau2 336x256 25mm</option>
+        <option value="flir_46640025HSPNLX">Flir Tau2 640x512 25mm</option>
+        <option value="flir_46336035HSPNLX">Flir Tau2 336x256 35mm</option>
+        <option value="flir_46640035HSPNLX">Flir Tau2 640x512 35mm</option>
+        <option value="flir_46336050HSPNLX">Flir Tau2 336x256 50mm</option>
+        <option value="flir_46640050HSPNLX">Flir Tau2 640x512 50mm</option>
+        <option value="flir_46633660HSPNLX">Flir Tau2 336x256 60mm</option>
+        <option value="flir_46640060HSPNLX">Flir Tau2 640x512 60mm</option>
         <option value="flir_lepton_50">Flir Lepton 80x60 50mm</option>
         <option value="flir_lepton_25">Flir Lepton 80x60 25mm</option>
         <option value="flir_lepton3_50">Flir Lepton3 160x120 50mm</option>
@@ -66,8 +75,8 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
   <tr>
     <th></th>
     <td></td>
-    <th><div style="overflow: hidden; white-space: nowrap;">Ispect (m)</div></th>
-    <td><input id="ispect" type="text" /></td>
+    <th><div style="overflow: hidden; white-space: nowrap;">Inspect (m)</div></th>
+    <td><input id="inspect" type="text" /></td>
   </tr>
 </table>
 
@@ -92,8 +101,8 @@ function aggiorna_distanze ()
   var d_identification = Math.round ( (res / (2 * 250) ) / (Math.tan (angolo * Math.PI / 180.00) ));
   document.querySelector('#identification').value = d_identification;
 
-  var d_ispect = Math.round ( (res / (2 * 1000) ) / (Math.tan (angolo * Math.PI / 180.00) ));
-  document.querySelector('#ispect').value = d_ispect;
+  var d_inspect = Math.round ( (res / (2 * 1000) ) / (Math.tan (angolo * Math.PI / 180.00) ));
+  document.querySelector('#inspect').value = d_inspect;
 }
 
 function aggiorna_telecamera (aggiorna_dati)
@@ -151,6 +160,60 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 640;
     document.querySelector('#angolo_tele_verticale').value = 18.5;
     document.querySelector('#angolo_tele_orizzontale').value = 22.5;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46336019HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 336;
+    document.querySelector('#angolo_tele_verticale').value = 6.5;
+    document.querySelector('#angolo_tele_orizzontale').value = 8.5;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46640019HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 640;
+    document.querySelector('#angolo_tele_verticale').value = 13;
+    document.querySelector('#angolo_tele_orizzontale').value = 16;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46336025HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 336;
+    document.querySelector('#angolo_tele_verticale').value = 5;
+    document.querySelector('#angolo_tele_orizzontale').value = 6.5;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46640025HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 640;
+    document.querySelector('#angolo_tele_verticale').value = 10;
+    document.querySelector('#angolo_tele_orizzontale').value = 12.5;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46336035HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 336;
+    document.querySelector('#angolo_tele_verticale').value = 3.55;
+    document.querySelector('#angolo_tele_orizzontale').value = 4.65;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46640035HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 640;
+    document.querySelector('#angolo_tele_verticale').value = 7;
+    document.querySelector('#angolo_tele_orizzontale').value = 9;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46336050HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 336;
+    document.querySelector('#angolo_tele_verticale').value = 2.5;
+    document.querySelector('#angolo_tele_orizzontale').value = 3.25;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46640050HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 640;
+    document.querySelector('#angolo_tele_verticale').value = 4.95;
+    document.querySelector('#angolo_tele_orizzontale').value = 6.2;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_46336060HSPNLX')
+  {
+    document.querySelector('#risoluzione_orizzontale').value = 336;
+    document.querySelector('#angolo_tele_verticale').value = 2.1;
+    document.querySelector('#angolo_tele_orizzontale').value = 2.75;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_46640060HSPNLX')
   {
