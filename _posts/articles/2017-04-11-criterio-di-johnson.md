@@ -7,7 +7,7 @@ comments: true
 tags: cctv
 keyworks: criterio johnson cctv
 share: true
-modified: 2019-09-16T00:00:00+02:00
+modified: 2021-01-07T00:00:00+01:00
 ---
 
 
@@ -51,6 +51,12 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="flir_lepton_50">Flir Lepton 80x60 50mm</option>
         <option value="flir_lepton_25">Flir Lepton 80x60 25mm</option>
         <option value="flir_lepton3_50">Flir Lepton3 160x120 50mm</option>
+        <option value="flir_20320A012">Flir Boson 320x256 12° HFoV</option>
+        <option value="flir_20320A024">Flir Boson 320x256 24.1° HFoV</option>
+        <option value="flir_20320A034">Flir Boson 320x256 34° HFoV</option>
+        <option value="flir_20640A018">Flir Boson 640x512 18° HFoV</option>
+        <option value="flir_20640A032">Flir Boson 640x512 32° HFoV</option>
+        <option value="flir_20640A050">Flir Boson 640x512 150° HFoV</option>
       </select>
     </td>
   </tr>
@@ -303,6 +309,49 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#angolo_tele_verticale').value = 1.32;
     document.querySelector('#angolo_tele_orizzontale').value = 2.36;
   }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20320A012')
+  {
+    document.querySelector('#risoluzione_verticale').value = 320;
+    document.querySelector('#risoluzione_orizzontale').value = 256;
+    document.querySelector('#angolo_tele_verticale').value = 12;
+    document.querySelector('#angolo_tele_orizzontale').value = 9.6;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20320A024')
+  {
+    document.querySelector('#risoluzione_verticale').value = 320;
+    document.querySelector('#risoluzione_orizzontale').value = 256;
+    document.querySelector('#angolo_tele_verticale').value = 24;
+    document.querySelector('#angolo_tele_orizzontale').value = 19.2;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20320A034')
+  {
+    document.querySelector('#risoluzione_verticale').value = 320;
+    document.querySelector('#risoluzione_orizzontale').value = 256;
+    document.querySelector('#angolo_tele_verticale').value = 34;
+    document.querySelector('#angolo_tele_orizzontale').value = 27.2;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A018')
+  {
+    document.querySelector('#risoluzione_verticale').value = 640;
+    document.querySelector('#risoluzione_orizzontale').value = 512;
+    document.querySelector('#angolo_tele_verticale').value = 18;
+    document.querySelector('#angolo_tele_orizzontale').value = 13.5;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A032')
+  {
+    document.querySelector('#risoluzione_verticale').value = 640;
+    document.querySelector('#risoluzione_orizzontale').value = 512;
+    document.querySelector('#angolo_tele_verticale').value = 32;
+    document.querySelector('#angolo_tele_orizzontale').value = 25.6;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A050')
+  {
+    document.querySelector('#risoluzione_verticale').value = 640;
+    document.querySelector('#risoluzione_orizzontale').value = 512;
+    document.querySelector('#angolo_tele_verticale').value = 50;
+    document.querySelector('#angolo_tele_orizzontale').value = 37.5;
+  }
+
 
   if (aggiorna_dati)
       aggiorna_distanze ();
