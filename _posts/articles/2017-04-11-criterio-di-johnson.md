@@ -313,43 +313,43 @@ function aggiorna_telecamera (aggiorna_dati)
   {
     document.querySelector('#risoluzione_verticale').value = 256;
     document.querySelector('#risoluzione_orizzontale').value = 320;
-    document.querySelector('#angolo_tele_verticale').value = 9.6;
-    document.querySelector('#angolo_tele_orizzontale').value = 12;
+    document.querySelector('#angolo_tele_verticale').value = 4.8;
+    document.querySelector('#angolo_tele_orizzontale').value = 6;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20320A024')
   {
     document.querySelector('#risoluzione_verticale').value = 256;
     document.querySelector('#risoluzione_orizzontale').value = 320;
-    document.querySelector('#angolo_tele_verticale').value = 19.2;
-    document.querySelector('#angolo_tele_orizzontale').value = 24;
+    document.querySelector('#angolo_tele_verticale').value = 9.6;
+    document.querySelector('#angolo_tele_orizzontale').value = 12;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20320A034')
   {
     document.querySelector('#risoluzione_verticale').value = 256;
     document.querySelector('#risoluzione_orizzontale').value = 320;
-    document.querySelector('#angolo_tele_verticale').value = 27.2;
-    document.querySelector('#angolo_tele_orizzontale').value = 34;
+    document.querySelector('#angolo_tele_verticale').value = 13.6;
+    document.querySelector('#angolo_tele_orizzontale').value = 17;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A018')
   {
     document.querySelector('#risoluzione_verticale').value = 512;
     document.querySelector('#risoluzione_orizzontale').value = 640;
-    document.querySelector('#angolo_tele_verticale').value = 13.5;
-    document.querySelector('#angolo_tele_orizzontale').value = 18;
+    document.querySelector('#angolo_tele_verticale').value = 6.7;
+    document.querySelector('#angolo_tele_orizzontale').value = 9;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A032')
   {
     document.querySelector('#risoluzione_verticale').value = 512;
     document.querySelector('#risoluzione_orizzontale').value = 640;
-    document.querySelector('#angolo_tele_verticale').value = 25.6;
-    document.querySelector('#angolo_tele_orizzontale').value = 32;
+    document.querySelector('#angolo_tele_verticale').value = 12.8;
+    document.querySelector('#angolo_tele_orizzontale').value = 16;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A050')
   {
     document.querySelector('#risoluzione_verticale').value = 512;
     document.querySelector('#risoluzione_orizzontale').value = 640;
-    document.querySelector('#angolo_tele_verticale').value = 37.5;
-    document.querySelector('#angolo_tele_orizzontale').value = 50;
+    document.querySelector('#angolo_tele_verticale').value = 18.75;
+    document.querySelector('#angolo_tele_orizzontale').value = 25;
   }
 
 
