@@ -56,7 +56,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="flir_20320A034">Flir Boson 320x256 34° HFoV</option>
         <option value="flir_20640A018">Flir Boson 640x512 18° HFoV</option>
         <option value="flir_20640A032">Flir Boson 640x512 32° HFoV</option>
-        <option value="flir_20640A050">Flir Boson 640x512 150° HFoV</option>
+        <option value="flir_20640A050">Flir Boson 640x512 50° HFoV</option>
       </select>
     </td>
   </tr>
