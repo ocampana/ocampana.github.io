@@ -21,7 +21,8 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
     <th>Bersaglio</th>
     <td>
       <select id="bersaglio" name="bersaglio" style="width:100%;">
-        <option value="uomo">Uomo</option>
+        <option value="uomo">Uomo (0,5m)</option>
+        <option value="uomo_1m">Uomo (1,0m)</option>
         <option value="tir">TIR</option>
       </select>
     </td>
@@ -130,6 +131,11 @@ function aggiorna_bersaglio (aggiorna_dati)
   {
     document.querySelector('#dimensione_verticale').value = 2;
     document.querySelector('#dimensione_orizzontale').value = 0.5;
+  }
+  else if (document.querySelector('#bersaglio option:checked').value == 'uomo_1m')
+  {
+    document.querySelector('#dimensione_verticale').value = 2;
+    document.querySelector('#dimensione_orizzontale').value = 1;
   }
   else if (document.querySelector('#bersaglio option:checked').value == 'tir')
   {
