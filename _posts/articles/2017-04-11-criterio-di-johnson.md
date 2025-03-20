@@ -55,6 +55,7 @@ Per gli impazienti, ecco un calcolatore per determinare le prestazioni di un sis
         <option value="flir_20320A012">Flir Boson 320x256 12° HFoV</option>
         <option value="flir_20320A024">Flir Boson 320x256 24.1° HFoV</option>
         <option value="flir_20320A034">Flir Boson 320x256 34° HFoV</option>
+        <option value="flir_20640A012">Flir Boson 640x512 12° HFoV</option>
         <option value="flir_20640A018">Flir Boson 640x512 18° HFoV</option>
         <option value="flir_20640A032">Flir Boson 640x512 32° HFoV</option>
         <option value="flir_20640A050">Flir Boson 640x512 50° HFoV</option>
@@ -335,6 +336,13 @@ function aggiorna_telecamera (aggiorna_dati)
     document.querySelector('#risoluzione_orizzontale').value = 320;
     document.querySelector('#angolo_tele_verticale').value = 13.6;
     document.querySelector('#angolo_tele_orizzontale').value = 17;
+  }
+  else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A012')
+  {
+    document.querySelector('#risoluzione_verticale').value = 512;
+    document.querySelector('#risoluzione_orizzontale').value = 640;
+    document.querySelector('#angolo_tele_verticale').value = 4.8;
+    document.querySelector('#angolo_tele_orizzontale').value = 6;
   }
   else if (document.querySelector('#telecamera option:checked').value == 'flir_20640A018')
   {
