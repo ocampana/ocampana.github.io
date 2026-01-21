@@ -23,4 +23,4 @@ Ho un dottorato di ricerca in ingegneria delle telecomunicazioni, approdo nel mo
 
 Sono tenace e votato al risultato. Sempre.
 
-Ho un profilo ibrido sia tecnico che manageriale, perché mi piace sviluppare prodotti complessi con la mia squadra mantenendosotto controllo la profittabilità dei progetti.
+Ho un profilo ibrido sia tecnico che manageriale, perché mi piace sviluppare prodotti complessi con la mia squadra mantenendo sotto controllo la profittabilità dei progetti.
