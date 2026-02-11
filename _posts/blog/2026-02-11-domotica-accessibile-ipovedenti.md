@@ -40,6 +40,16 @@ Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzio
 
 Se l’installazione non crea automaticamente un *conversation agent*, aggiungetelo manualmente con l’apposito pulsante nella schermata delle integrazioni. E' possibile creare anche più di un agente di conversazione, basandosi su diversi modelli (e costi). Come vi dicevo, io uso `mistral-small-latest`.
 
+I modelli di Mistral hanno la caratteristica di non obbedire sempre alle richieste di formattazione e troppo spesso tendono a generare testo in formato markdown. Questa formattazione non va bene con i sistemi text-to-speech, che finiscono con leggere ai i tag del markup. Per ovviare a questo nella scheda dell'integrazione di Local OpenAI LLM è necessario clockare sul simbolo di configurazione dell'agente di conversazione e modificare la configurazione dell'agente nel modo seguente:
+
+```
+You are a voice assistant for Home Assistant.
+Answer questions about the world truthfully.
+Answer in plain text. Never use markdown. Keep it simple and to the point.
+```
+
+Può sembrare poco, ma l'aggiunta di `Never use markdown.` fa la differenza.
+
 #### Passo 3: Abilitare la sintesi vocale con PicoTTS
 
 PicoTTS è un motore di text-to-speech (TTS) basilare ma funzionale per testare la soluzione, perché in questa applicazione ci interessa di più capire il linguaggio naturale dell'utente ed eseguire azioni, piuttosto che fare conversazione. PicoTTS ha una voce robotica e limitata perché è pensato per sistemi embedded. Per attivarlo, modificate il file `configuration.yaml` di Home Assistant aggiungendo:
