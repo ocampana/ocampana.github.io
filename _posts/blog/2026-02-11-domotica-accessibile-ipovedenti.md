@@ -36,7 +36,7 @@ Installate l’addon da HACS di Home Assistant. Nella configurazione, selezionat
 
 #### Local OpenAI LLM
 
-Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral: `https://api.mistral.ai/v1/`.
+Anche qui, installate l’addon (versione 1.3.1 o successiva) da HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral: `https://api.mistral.ai/v1/`.
 
 Se l’installazione non crea automaticamente un *conversation agent*, aggiungetelo manualmente con l’apposito pulsante nella schermata delle integrazioni. E' possibile creare anche più di un agente di conversazione, basandosi su diversi modelli (e costi). Come vi dicevo, io uso `mistral-small-latest`.
 
