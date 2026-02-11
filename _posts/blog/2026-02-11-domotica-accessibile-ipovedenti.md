@@ -36,7 +36,7 @@ Installate l’addon da HACS di Home Assistant. Nella configurazione, selezionat
 
 #### Local OpenAI LLM
 
-Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral: `https://api.mistral.ai/v1/`
+Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral: `https://api.mistral.ai/v1/`.
 
 Se l’installazione non crea automaticamente un *conversation agent*, aggiungetelo manualmente con l’apposito pulsante nella schermata delle integrazioni. E' possibile creare anche più di un agente di conversazione, basandosi su diversi modelli (e costi). Come vi dicevo, io uso `mistral-small-latest`.
 
@@ -54,14 +54,18 @@ Riavviate Home Assistant, in modo da abilitare tutti i componenti.
 #### Passo 4: Collegare i puntini in Home Assistant
 
 Ora è il momento di unire tutto:
-* Andate in Impostazioni > Assistenti vocali.
+* Andate in `Impostazioni` > `Assistenti vocali`.
 * Verificate che ci sia un assistente predefinito chiamato `Home Assistant`. Qualora non fosse presente si può aggiungerne uno
-* Nella sezione AI Agent, scegliete quello che avete creato con il modello che avete selezionato configurando Local OpenAI LLM (`mistral-small-latest` in questo esempio) e disabilitate la gestione dei comandi in locale (altrimenti bypassereste l’AI).
-* In Riconoscimento vocale, impostate Mistral AI Whisper.
-* Infine, in Sintesi vocale, selezionate PicoTTS.
+* Nella sezione `AI Agent`, scegliete quello che avete creato con il modello che avete selezionato configurando Local OpenAI LLM (`mistral-small-latest` in questo esempio) e disabilitate la gestione dei comandi in locale (altrimenti bypassereste l’AI).
+* In `Riconoscimento vocale`, impostate `Mistral AI Whisper`.
+* Infine, in `Sintesi vocale`, selezionate `PicoTTS`.
+
+Dovreste ritrovarvi con una configurazione simile a questa:
+
+[configurazione assistente vocale home assistant](/images/20260211-impostazioni-assistente-vocale.png)
 
 #### Testare la soluzione
 
 A questo punto, potete usare l'interfaccia web o la companion app di Home Assistant (disponibile per Android e iOS) per interagire con il sistema. In alto destra c'è la voce `Assist` (attenzione, nella app potrebbe essere collassata nell'icone dei re puntini) con cui sarà possibile avviare una conversazione. **Attenzione**: potreste accadere che su Firefox non vi funzioni il microfono. Questo accade perché siete connessi all'interfaccia web mediante HTTP e non HTTPS.
 
-Qualora il sistema vi piaccia, potete automatizzare i comandi vocali con [Voice](https://www.home-assistant.io/voice-pe/) lo smart speaker ufficiale di Home Assistant.
+Qualora il sistema vi piaccia, potete automatizzare i comandi vocali con [Voice](https://www.home-assistant.io/voice-pe/), lo smart speaker ufficiale di Home Assistant.

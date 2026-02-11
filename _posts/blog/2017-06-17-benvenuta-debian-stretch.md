@@ -22,10 +22,10 @@ Lo scopo di [Debian](https://www.debian.org/) è di essere il sistema operativo 
 
 Come tutte le versioni di Debian, anche la versione 9.0 ha un nome legato ai film d'animazione di Toy Story: Stretch.
 
-Per capire le varie release e le distribuzioni derivate da Debina ho trovato un'immagine molto carina:
+Per capire le varie release e le distribuzioni derivate da Debian ho trovato un'immagine molto carina:
 
 {: style="text-align: center;"}
-![Unserstanding debian](/images/understanding-debian.jpg)
+![Understanding debian](/images/understanding-debian.jpg)
 
 Debian Stretch è [dedicata a Ian Murdok](http://ftp.debian.org/debian/doc/dedication/dedication-9.0.txt), fondatore del Debian Project ed autore del [Manifesto Debian](https://it.wikipedia.org/wiki/Manifesto_Debian), morto il 28 Dicembre 2015.
 
