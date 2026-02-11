@@ -24,9 +24,9 @@ I componenti chiave sono:
 
 ### Passo 1: Configurare Mistral AI
 
-Prima di tutto, è necessario registrarsi su Mistral AI all’indirizzo https://console.mistral.ai/home e generare una chiave API. Per comodità, io l’ho chiamata `homeassistant`, ma potete usare il nome che preferite. Questa chiave servirà per collegare Home Assistant ai servizi di Mistral.
+Prima di tutto, è necessario registrarsi su Mistral AI e generare una chiave API all’indirizzo [https://console.mistral.ai/home](https://console.mistral.ai/home). Per comodità, io l’ho chiamata `homeassistant`, ma potete usare il nome che preferite. Questa chiave servirà per collegare Home Assistant ai servizi di Mistral.
 
-Attenzione: Mistral, come molti provider di inferenza, ha una offerta variagata. Offre un livello gratuito con crediti limitati (verificate le condizioni aggiornate sul loro sito), ha la possibilità di funzionare in abbonamento con un canone mensile e supporta una modalit di pagamento a consumo, chiamata *API*. In generale, poiché non voglio essere legato ad un tool di un venditore specifico, io opto sempre per la fatturazione a consumo dell'accesso mediante API. Questo tipo di accesso permette spesso di pagare di meno di un abbonamento. Ad esempio, il modello `mistral-small-latest` (quello che sto usando io) ha un prezzo accessibile e funziona egregiamente per questo scopo.
+Attenzione: Mistral, come molti provider di inferenza, ha una offerta variegata. Offre un livello gratuito con crediti limitati (verificate le condizioni aggiornate sul loro sito), ha la possibilità di funzionare in abbonamento con un canone mensile e supporta una modalità di pagamento a consumo, chiamata **API**. In generale, poiché non voglio essere legato ad un tool di un venditore specifico, io opto sempre per la fatturazione a consumo dell'accesso mediante API. Questo tipo di accesso permette spesso di pagare di meno di un abbonamento. Ad esempio, il modello `mistral-small-latest` (quello che sto usando io) ha un prezzo accessibile e funziona egregiamente per questo scopo. Trovate tutte le informazioni sui prezzi dell'uso delle API [qua](https://mistral.ai/pricing#api)
 
 ### Passo 2: Installare e configurare gli addon in Home Assistant
 
@@ -36,9 +36,7 @@ Installate l’addon da HACS di Home Assistant. Nella configurazione, selezionat
 
 #### Local OpenAI LLM
 
-Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral:
-
-```https://api.mistral.ai/v1/```
+Anche qui, installate l’addon (versione 1.3.1 o successiva) ha HACS. *Attenzione*: versioni precedenti dell'addon non funzionano con Mistral (si veda questa [issue](https://github.com/skye-harris/hass_local_openai_llm/issues/22)) su Github. Nella configurazione, oltre alla chiave API, dovete specificare l’URL del servizio Mistral: `https://api.mistral.ai/v1/`
 
 Se l’installazione non crea automaticamente un *conversation agent*, aggiungetelo manualmente con l’apposito pulsante nella schermata delle integrazioni. E' possibile creare anche più di un agente di conversazione, basandosi su diversi modelli (e costi). Come vi dicevo, io uso `mistral-small-latest`.
 
