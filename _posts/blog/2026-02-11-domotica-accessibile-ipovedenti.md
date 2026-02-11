@@ -62,7 +62,7 @@ Ora è il momento di unire tutto:
 
 Dovreste ritrovarvi con una configurazione simile a questa:
 
-[configurazione assistente vocale home assistant](/images/20260211-impostazioni-assistente-vocale.png)
+![configurazione assistente vocale home assistant](/images/20260211-impostazioni-assistente-vocale.png)
 
 #### Testare la soluzione
 
