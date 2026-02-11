@@ -42,7 +42,7 @@ Se l’installazione non crea automaticamente un *conversation agent*, aggiunget
 
 #### Passo 3: Abilitare la sintesi vocale con PicoTTS
 
-PicoTTS è un motore di text-to-speech (TTS) basilare ma funzionale per testare la soluzione. PicoTTS ha una voce robotica e limitata perché è pensato per sistemi embedded. Per attivarlo, modificate il file `configuration.yaml` di Home Assistant aggiungendo:
+PicoTTS è un motore di text-to-speech (TTS) basilare ma funzionale per testare la soluzione, perché in questa applicazione ci interessa di più capire il linguaggio naturale dell'utente ed eseguire azioni, piuttosto che fare conversazione. PicoTTS ha una voce robotica e limitata perché è pensato per sistemi embedded. Per attivarlo, modificate il file `configuration.yaml` di Home Assistant aggiungendo:
 
 ```
 tts:
@@ -66,6 +66,6 @@ Dovreste ritrovarvi con una configurazione simile a questa:
 
 #### Testare la soluzione
 
-A questo punto, potete usare l'interfaccia web o la companion app di Home Assistant (disponibile per Android e iOS) per interagire con il sistema. In alto destra c'è la voce `Assist` (attenzione, nella app potrebbe essere collassata nell'icone dei re puntini) con cui sarà possibile avviare una conversazione. **Attenzione**: potreste accadere che su Firefox non vi funzioni il microfono. Questo accade perché siete connessi all'interfaccia web mediante HTTP e non HTTPS.
+A questo punto, potete usare l'interfaccia web o la companion app di Home Assistant (disponibile per Android e iOS) per interagire con il sistema. In alto destra c'è la voce `Assist` (attenzione, nella app potrebbe essere collassata nell'icone dei re puntini) con cui sarà possibile avviare una conversazione. **Attenzione**: potrebbe accadere che su Firefox non vi funzioni il microfono. Questo accade perché siete connessi all'interfaccia web mediante HTTP e non HTTPS.
 
 Qualora il sistema vi piaccia, potete automatizzare i comandi vocali con [Voice](https://www.home-assistant.io/voice-pe/), lo smart speaker ufficiale di Home Assistant.
