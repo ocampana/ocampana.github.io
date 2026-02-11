@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt: una soluzione vocale per ipovedenti (e non solo)
 tags:
-keywords: ai homeassistant
+keywords: ai homeassistant mistral
 ---
 
 Qualche giorno fa, durante una cena con un vecchio amico che non vedevo da anni, mi ha raccontato di un progetto a cui stava lavorando: automatizzare la domotica di casa sua per renderla controllabile tramite voce, con l'obiettivo di migliorare la qualità della vita di sua figlia, purtroppo ipovedente. Mentre ascoltavo le sue idee, mi sono reso conto che conoscevo già tutti i "mattoncini" necessari per costruire una soluzione del genere. Così, dopo averla testata a casa mia, ho deciso di scrivere questa guida per condividerla con lui e con chiunque altro si trovi ad affrontare una sfida simile.
